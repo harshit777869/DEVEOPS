@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kubernetes</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Kubernetes Deployment</h2>
+
+<button onclick="deploy()">Deploy Cluster</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function deploy(){
+
+    let pods = [
+        "Pod 1 → Running ✔",
+        "Pod 2 → Running ✔",
+        "Pod 3 → Running ✔",
+        "Service → Active ✔",
+        "Load Balancer → Connected ✔"
+    ];
+
+    out.innerHTML = "";
+
+    pods.forEach(p=>{
+        out.innerHTML += `<div class="card">${p}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>

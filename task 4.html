@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Security Scanner</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#ff4444;color:white;border:none;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Security CI/CD Scanner</h2>
+
+<button onclick="scan()">Run Scan</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function scan(){
+
+    let issues = [
+        "Code Quality Scan Started",
+        "Checking Vulnerabilities...",
+        "⚠ Low Risk Issue Found",
+        "⚠ XSS Risk Detected",
+        "Security Patch Applied ✔",
+        "Build Approved ✔"
+    ];
+
+    out.innerHTML = "";
+
+    issues.forEach(i=>{
+        out.innerHTML += `<div class="card">${i}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CI/CD Pipeline</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>CI/CD Pipeline</h2>
+
+<button onclick="run()">Run Pipeline</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function run(){
+
+    let steps = [
+        "Code Pushed to GitHub",
+        "Build Started",
+        "Tests Running",
+        "Tests Passed ✔",
+        "Deployment to Server",
+        "Deployment Successful ✔"
+    ];
+
+    out.innerHTML = "";
+
+    steps.forEach(s=>{
+        out.innerHTML += `<div class="card">${s}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>
